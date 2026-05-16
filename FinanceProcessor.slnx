@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FinanceProcessor.App/FinanceProcessor.App.csproj" />
+  <Project Path="FinanceProcessor.Core/FinanceProcessor.Core.csproj" />
+  <Project Path="FinanceProcessor.Tests/FinanceProcessor.Tests.csproj" />
+</Solution>
