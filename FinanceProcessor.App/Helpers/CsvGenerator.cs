@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace FinanceProcessor.App.Helpers
 {
     public class CsvGenerator
@@ -44,7 +46,10 @@ namespace FinanceProcessor.App.Helpers
                     DateTime dataAleatoria = dataInicial.AddDays(random.Next(diasNoIntervalo));
                     decimal numeroAleatorio =
                         (decimal)random.NextDouble() * (10001.0m - 1000.0m) + 1000.0m;
-                    string numeroFormatado = numeroAleatorio.ToString("F2");
+                    string numeroFormatado = numeroAleatorio.ToString(
+                        "F2",
+                        CultureInfo.InvariantCulture
+                    );
                     writer.WriteLine(
                         $"{dataAleatoria:dd/MM/yyyy},{descricao[random.Next(descricao.Length)]},{numeroFormatado},{categoria[random.Next(categoria.Length)]},{tipo[random.Next(tipo.Length)]}"
                     );
